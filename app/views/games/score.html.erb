@@ -1,0 +1,12 @@
+<h1>Result</h1>
+<p><%= @message %></p>
+<p>Score = <%= session[:score] %></p>
+<p><%= link_to "Play Again", new_path %><p>
+  <form action="/new" method="get">
+     <input id="status" name="status" type="hidden" />
+    <%= link_to "Reset score", new_path %>
+    <%= hidden_field_tag :status, true %>
+
+  </form>
+
+
